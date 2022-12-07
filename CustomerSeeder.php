@@ -1,0 +1,26 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class CustomerSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //
+        DB::table('customers')->insert([
+            'first_name' => "John",
+            'last_name' => "Doe",
+            'shipping_address' => "1234 Maple Ave.",
+            'billing_address' => "1234 Maple Ave."
+        ]);
+    }
+}
